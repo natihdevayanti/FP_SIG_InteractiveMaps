@@ -1,0 +1,561 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,300&display=swap");
+
+/* * {
+  box-sizing: border-box;
+} */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  color: #404040;
+  font: 400 15px/22px "Source Sans Pro", "Helvetica Neue", Sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+header,
+section {
+  overflow-x: hidden;
+}
+:root {
+  --Nunito-font: "Nunito", sans-serif;
+  --bggradient: linear-gradient(
+    to bottom,
+    rgb(248, 237, 165),
+    rgb(255, 246, 142)
+  );
+}
+
+header a {
+  font-family: var(--Nunito-font);
+  font-size: 1.2em;
+  color: rgb(2, 27, 20);
+}
+
+header {
+  background: #24ddbe;
+  background: var(--bggradient);
+}
+
+.dropdown-content {
+  background: rgba(255, 255, 255, 0.534);
+  min-width: 130px;
+  box-shadow: 0px 3px 16px 2px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  display: none;
+  position: absolute;
+}
+.dropdown-content a {
+  color: black;
+  padding: 17px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background: rgb(255, 223, 0);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+header .nav-item:last-child {
+  padding-right: 5em;
+}
+
+header .nav-item {
+  padding: 0.9em;
+}
+
+header .navbar-brand {
+  padding-left: 2rem;
+}
+
+header .nav-link:hover {
+  color: rgb(0, 128, 96);
+}
+
+header .row .col-md-5 {
+  padding: 4.2vmin 1vmin;
+
+  /* font-family: var(--Nunito-font);
+    font-weight: 2000; */
+}
+header h1 > span {
+  color: rgb(15, 107, 7);
+}
+
+header .row .col-md-6 {
+  padding: 27vmin 1vmin;
+  padding-bottom: 35vmin;
+  font-family: var(--Nunito-font);
+  font-weight: lighter;
+  color: rgb(0, 54, 43);
+}
+
+header .row .col-md-5 img {
+  width: 160%;
+}
+
+header .container .col-md-6 h6 {
+  /* padding: 2vm; */
+  padding: 0.3em 0em;
+  letter-spacing: 4.5px;
+}
+
+header .container .col-md-6 h1 {
+  font-size: 6.5vmin;
+  font-weight: bold;
+  padding: 0.3em 0em;
+}
+
+header .container .col-md-6 p {
+  padding: 1vmin 5vmin;
+}
+
+header .container .col-md-6 button {
+  border-radius: 20px;
+  font-weight: bold;
+}
+/* section 1*/
+
+.section-1 {
+  padding: 20vmin 0;
+  background-color: rgba(187, 255, 0, 0.096);
+}
+
+.section-1 .row .col-md-6 .bali img {
+  width: 90%;
+  border-radius: 0.9em;
+}
+
+.section-1 .row .col-md-6:last-child {
+  position: relative;
+}
+
+.section-1 .row .col-md-6 .panel {
+  top: 15vmin;
+  left: -17vmin;
+  border-radius: 3px;
+  background: rgba(124, 122, 22, 0.589);
+  text-align: justify;
+  padding: 5vmin 2vmin 5vmin 15vmin;
+  box-shadow: 0px 20px 30px grey;
+  font-family: var(--Nunito-font);
+  position: absolute;
+}
+
+.section-1 .row .col-md-6 h1 {
+  font-weight: bold;
+  padding: 1em 3;
+  font-size: 2.2em;
+}
+
+.section-1 .row .col-md-6 .panel p {
+  font-size: 1.1em;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/*section 2*/
+.section-2 {
+  background-color: rgba(187, 255, 0, 0.096);
+}
+
+.cover {
+  width: 100%;
+  height: 55vmin;
+  background: url("../assets/bali.jpg");
+  background-position: -24rem -19rem;
+  background-size: 150%;
+
+  position: relative;
+}
+
+.cover .content {
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  padding-top: 19vmin;
+}
+
+.cover .content > h1 {
+  font-family: var(--Nunito-font);
+  font-size: 6vmin;
+  color: whitesmoke;
+}
+
+.cover .content > p {
+  font-family: var(--Nunito-font);
+  font-size: 2vmin;
+  color: #ddd;
+}
+
+.foods .rect {
+  position: relative;
+  z-index: 1;
+  background: white;
+  width: 17rem;
+  height: 12rem;
+  padding-top: 3.5vmin;
+  margin: 1rem;
+  border-radius: 0.5em;
+  box-shadow: 1px 2pc 50px 0px rgba(0, 0, 0, 0.2);
+}
+
+.foods {
+  margin-top: -15vmin;
+  padding-bottom: 5em;
+}
+
+.foods .rect p {
+  font-family: var(--Nunito-font);
+}
+
+/* section 3*/
+
+.travel > h1 {
+  padding-top: 5vmin;
+  color: rgba(0, 0, 0, 0);
+  font-size: 4vmin;
+  background: url("../assets/barong.png");
+}
+
+.travel > h2 {
+  color: rgb(6, 84, 87);
+  font-size: 7vmin;
+  font-weight: 800;
+  font-family: var(--Nunito-font);
+}
+
+.travel > p {
+  font-family: var(--Nunito-font);
+  background: rgba(209, 212, 192, 0.342);
+  font-weight: 800;
+  font-size: 4vmin;
+}
+.section-3 {
+  padding: 20vmin 0;
+  background-color: rgba(187, 255, 0, 0.096);
+}
+
+.section-3 .container h1 {
+  font-size: 8vmin;
+  padding-top: 15vmin;
+}
+
+.section-3 .team {
+  padding-top: 0.05vmin;
+  padding-bottom: 8vmin;
+}
+
+.section-3 .card {
+  font-family: var(--Nunito-font);
+  width: 25rem;
+  margin-top: 10vmin;
+  background-color: rgba(2, 32, 16, 0.164);
+}
+
+.section-3 .card .card-text {
+  font-family: var(--Nunito-font);
+  padding: 0.1em;
+}
+.section-3 .card .card-title {
+  font-family: var(--Nunito-font);
+  font-weight: 700;
+}
+
+.section-3 .card .card-body > a {
+  font-family: var(--Nunito-font);
+  font-size: 0.5em;
+}
+
+.section-3 .card .card-body a {
+  font-family: var(--Nunito-font);
+  background-color: #044238;
+  font-size: 1em;
+}
+
+.section-3 .carousel-item {
+  padding-left: 3rem;
+}
+/*additional*/
+.wrapper {
+  font-family: var(--Nunito-font);
+  font-size: 1em;
+  color: white;
+}
+
+.wrapper .box {
+  width: 80%;
+  height: 600px;
+  display: inline-block;
+  background-color: rgba(5, 31, 28, 0.986);
+  margin: 50px 10%;
+  box-shadow: 0 27px 87px rgba(0, 0, 0, 0.37);
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.wrapper .box-img {
+  float: left;
+}
+
+.wrapper .box-text {
+  margin-top: 5rem;
+  padding: 2rem 2rem 2rem 30rem;
+}
+
+.wrapper .box-text h1 {
+  font-style: 48px;
+  font-weight: bold;
+  color: rgba(201, 195, 144, 0.952);
+}
+
+.wrapper .box-text p {
+  padding-top: 0.5rem;
+  font-style: 12px;
+  text-align: justify;
+  font-weight: lighter;
+  color: whitesmoke;
+  letter-spacing: 0.25px;
+}
+
+/* map */
+.sidebar {
+  position: absolute;
+  width: 21%;
+  height: 90%;
+  top: 10%;
+  left: 0px;
+  overflow: hidden;
+  border-right: 1px solid rgb(255, 255, 255);
+}
+.pad2 {
+  padding: 20px;
+}
+h1 {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 20px 2px;
+}
+
+a {
+  color: #404040;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #101010;
+}
+.heading {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  min-height: 60px;
+  line-height: 60px;
+  padding: 0 10px;
+  background-color: rgba(37, 83, 73, 0.986);
+  color: #fff;
+}
+
+.listings {
+  height: 100%;
+  overflow: auto;
+  padding-bottom: 60px;
+  position: absolute;
+}
+
+.listings .item {
+  display: block;
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.listings .item:last-child {
+  border-bottom: none;
+}
+.listings .item .title {
+  display: block;
+  color: rgba(5, 31, 28, 0.986);
+  font-weight: 700;
+}
+
+.listings .item .title small {
+  font-weight: 400;
+}
+.listings .item.active .title,
+.listings .item .title:hover {
+  color: rgba(4, 145, 114, 0.986);
+}
+.listings .item.active {
+  background-color: #f8f8f8;
+}
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  border-left: 0;
+  background: rgb(255, 255, 255);
+}
+::-webkit-scrollbar-track {
+  background: none;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(4, 145, 114, 0.986);
+  border-radius: 0;
+}
+
+/* #map {
+  position: absolute;
+  top: 72px;
+  bottom: 0;
+  width: 100%;
+  height: 100%-70px;
+} */
+/* Marker tweaks */
+.marker {
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.mapboxgl-popup {
+  padding-bottom: 50px;
+}
+
+.mapboxgl-popup-close-button {
+  display: none;
+}
+.mapboxgl-popup-content {
+  font: 400 15px/22px "Source Sans Pro", "Helvetica Neue", Sans-serif;
+  padding: 0;
+  width: 210px;
+}
+.mapboxgl-popup-content-wrapper {
+  padding: 1%;
+}
+.mapboxgl-popup-content h6 {
+  background: rgba(37, 83, 73, 0.986);
+  color: #fff;
+  margin: 0;
+  display: block;
+  padding: 10px;
+  border-radius: 3px 3px 0 0;
+  font-weight: 700;
+  margin-top: -15px;
+}
+
+.mapboxgl-popup-content p {
+  margin: 0;
+  display: block;
+  padding: 10px 10px 10px 10px;
+  font-weight: 400;
+}
+
+.mapboxgl-popup-content div {
+  padding: 10px;
+}
+
+.mapboxgl-container .leaflet-marker-icon {
+  cursor: pointer;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+  margin-top: 15px;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+  border-bottom-color: #91c949;
+}
+
+/* .mapboxgl-popup-content {
+  max-width: 500px;
+  text-align: center;
+  font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+} */
+.filter-group {
+  font: 12px/20px "Nunito", sans-serif;
+  font-weight: 600;
+  position: absolute;
+  top: 200px;
+  right: 14px;
+  z-index: 1;
+  border-radius: 3px;
+  width: 130px;
+  color: rgba(0, 0, 0, 0.75);
+}
+.filter-group input[type="checkbox"]:first-child + label {
+  border-radius: 12px 12px 12px 12px;
+}
+
+.filter-group label {
+  border-radius: 12px 12px 12px 12px;
+  border: none;
+}
+.filter-group label:last-child {
+  border-radius: 12px 12px 12px 12px;
+  border: none;
+}
+
+.filter-group input[type="checkbox"] {
+  display: none;
+}
+
+.filter-group input[type="checkbox"] + label {
+  background-color: #dbdbdb;
+  display: block;
+  cursor: pointer;
+  padding: 6px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.filter-group input[type="checkbox"] + label {
+  background-color: #dbdbdb;
+  text-transform: capitalize;
+}
+.filter-group input[type="checkbox"] + label:hover {
+  background-color: rgba(255, 250, 180, 0.986);
+}
+.filter-group input[type="checkbox"]:checked + label {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.75);
+}
+.filter-group input[type="checkbox"]:checked + label:before {
+  content: "👍";
+  margin-right: 5px;
+}
+
+/*footer*/
+footer {
+  background: rgb(5, 31, 28);
+  overflow-x: hidden;
+  padding: 15vmin 10vmin;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+footer .socmed i {
+  padding-top: 1rem;
+  color: rgb(218, 165, 32);
+}
+
+footer .socmed i + i {
+  padding: 0 2em;
+}
+
+/*sticky*/
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(209, 212, 192, 0.8);
+  z-index: 9999;
+  transition: all 1.5s ease;
+}

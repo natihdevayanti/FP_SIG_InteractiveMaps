@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    
+    <title>Melali Maps</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+         <!-- Script for Mapbox -->
+        
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+<script src='https://api.mapbox.com/mapbox.js/plugins/turf/v3.0.11/turf.min.js'></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
+    <script src="https://kit.fontawesome.com/43ff9d611d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        #map { 
+           position:absolute;
+           top: 10%;bottom:0;
+            left:300px;
+            width: 79.2%;
+           
+            
+        }
+        #menu {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.747);
+    top: 85%;
+    border-radius: 25px;
+    padding: 10px;
+    left: 16%;
+    font-family: 'Nunito', sans-serif;
+    margin: 10px 25px 25px 520px;          
+}
+
+    </style>
+   
+</head>
+<body>
+    <!-- <div id="map"></div> -->
+
+    
+    <header>
+        <div class="container-fluid p-0">
+            <!-- remove padding from division tag-->
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="../dashboard/profile.html">
+                    <i class="fas fa-map-marker fa-2x mx-3">
+                    </i>Melali</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="mr-auto"></div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../dashboard.html">Dashboard<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../src/profile.html">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="dropdown">
+                                <a href="#" class="nav-link">Let's Travel!</a>
+                                <!-- <div class="dropdown-content">
+                                    <a href="../dashboard/food.html">Culinary</a>
+                                    <a href="../dashboard/tourist.html">Tourism Place</a>
+                                </div> -->
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+       
+    
+        <div id="map" class="map">
+        </div>
+        <div class='sidebar' style="width: 300px;">
+            <div class='heading'>
+              <h1>Berwisata di Denpasar</h1>
+            </div>
+            <div id='listings' class='listings'></div>
+          </div> 
+        <div id="menu">
+            <input id="satellite-v9" type="radio" name="rtoggle" value="satellite" checked="checked">
+            <!-- See a list of Mapbox-hosted public styles at -->
+            <!-- https://docs.mapbox.com/api/maps/styles/#mapbox-styles -->
+            <label for="satellite-v9">satellite</label>
+            <input id="light-v10" type="radio" name="rtoggle" value="light">
+            <label for="light-v10">light</label>
+            <input id="dark-v10" type="radio" name="rtoggle" value="dark">
+            <label for="dark-v10">dark</label>
+            <input id="streets-v11" type="radio" name="rtoggle" value="streets">
+            <label for="streets-v11">streets</label>
+            <input id="outdoors-v11" type="radio" name="rtoggle" value="outdoors">
+            <label for="outdoors-v11">outdoors</label>
+            </div>
+        <nav id="filter-group" class="filter-group"></nav>
+      
+    <!-- <footer>
+        <div class="container-fluid p-0">
+            <div class="row text-left">
+                <div class="col-md-5 col-md-5">
+                    <h1 class="text-light">Lorem Ipsum</h1>
+                    <p class="text-muted">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    </p>
+                    <h5 class="text-light">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    </h5>
+                </div>
+                <div class="col-md-7 text-right">
+                    <h3 class="text-light">
+                        Let's Get in Touch!
+                    </h3>
+                    <div class="socmed">
+                        <a href="https://github.com/natihdevayanti">
+                            <i class="fab fa-2x mx-3 fa-github-square"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/natih-devayanti-b41749192/">
+                            <i class=" fab fa-2x mx-3 fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/natihdevayanti">
+                            <i class="fab fa-2x mx-3 fa-twitter"></i>
+                        </a>
+                        <a href="https://web.facebook.com/natih.devayanti.7">
+                            <i class=" fab fa-2x mx-3 fa-facebook-square"></i>
+                        </a>
+                        <a href="https://www.instagram.com/putrinatih/">
+                            <i class=" fab fa-2x mx-3 fa-instagram-square"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCsqRVDq67LZRBe2u3Q8V7AQ?view_as=subscriber">
+                            <i class=" fab fa-2x mx-3 fa-youtube-square"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer> -->
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
