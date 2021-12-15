@@ -455,11 +455,11 @@ places.features.forEach(function(marker) {
         .addTo(map);
     
     markerList.push(el);
- 
+    //untuk hide sesuai dengan pilihan marker yang ada
     if(!(tourTypes.includes(marker.properties.tour))){
         tourTypes.push(marker.properties.tour);
 
-        // add checkbox and label elements 
+        // menambahkan checkbox dan label elemen
         var input = document.createElement('input');
         input.type = 'checkbox';
         input.checked = true;
